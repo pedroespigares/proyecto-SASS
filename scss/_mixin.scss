@@ -1,0 +1,111 @@
+/// Mixin que cambia el contenido de un elemento de acuerdo a un breakpoint
+/// @example
+/// .container{
+///    @include response(xl){
+///       background-color: getColor(secondary);
+///   }
+/// }
+/// @param {string} $breakpoint -- Nombre del breakpoint
+///
+@mixin response($breakpoint){
+    @if($breakpoint == xl){
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+    @else if($breakpoint == lg){
+        @media (min-width: 992px){
+            @content;
+        }
+    }
+    @else if($breakpoint == md){
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+    @else if($breakpoint == sm){
+        @media (min-width: 576px){
+            @content;
+        }
+    }
+    @else if($breakpoint == xs){
+        @media (min-width: 0px){
+            @content;
+        }
+    } 
+}
+
+
+/// Mixin para el menú de navegación
+/// @example
+/// .navigation{
+///   @include navigation();
+/// }
+/// @param {boolean} $center [false] -- Centrar el menú o ponerlo en la esquina superior derecha
+/// 
+@mixin navigation($center: false){
+    &-list{
+        display: flex;
+        @if($center){
+            justify-content: center;
+            gap: 10rem;
+        } @else {
+            justify-content: space-around;
+        }
+        align-items: center;
+        height: 100%;
+    }
+
+    &-item{
+        list-style: none;
+    }
+
+    &-link{
+        color: getColor(primary);
+        font-size: getFontSize(md);
+        text-decoration: none;
+        transition: $transition;
+        padding: 1rem 3rem 1rem 3rem;
+        font-weight: getFontWeight(semi-bold);
+        background-color: getColor(tertiary);
+        &:hover{
+            color: getColor(tertiary);
+            transition: $transition;
+            background-color: getColor(quaternary);
+        }
+    }
+    
+    &-button{
+        color: white;
+        background-color: getColor(primary);
+        font-size: getFontSize(md);
+        transition: $transition;
+        border: none;
+        padding: 1rem 3rem 1rem 3rem;
+        &:hover{
+            cursor: pointer;
+            background-color: darken(getColor(quaternary), 10%);
+            transition: $transition;
+        }
+    }
+}
+
+
+/// Mixin de posicionamiento con flexbox
+/// @example
+/// .container{
+///    @include flex();
+/// }
+/// @param {string} $direction [row] -- Dirección del flexbox
+/// @param {string} $justify [center]-- Justificación del contenido
+/// @param {string} $align [center]-- Alineación del contenido
+/// @param {string} $gap [0]-- Espacio entre elementos
+///
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0){
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

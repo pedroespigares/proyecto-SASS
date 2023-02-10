@@ -1,0 +1,19 @@
+/// Logo
+.logo{
+    grid-column:  1 / 3;
+    grid-row: 1 / 2;
+    padding: 1rem;
+    @include flex($direction: column, $justify: center, $align: start, $gap: 0);
+    &-img{
+        width: 10rem;
+        height: 100%;
+    }
+
+    &-text{
+        font-size: getFontSize(xl);
+        font-family: $font-family-logo;
+        text-transform: uppercase;
+        color: getColor(primary);
+        font-weight: 700;
+    }
+}
