@@ -1,0 +1,52 @@
+.publicity{
+    @include flex($direction: column, $gap: 5rem);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    
+
+    &-header{
+        @include section_header();
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    &-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        place-items: center;
+        
+        &-icon{
+            grid-area: 1 / 1 / 2 / 2;
+            color: getColor(primary);
+            font-size: getFontSize(icons-size);
+        }
+    
+        &-content{
+            grid-area: 1 / 2 / 2 / 3;
+            @include flex($direction: column, $gap: 2rem);
+            padding-right: 5rem;
+        }
+    
+        &-title{
+            color: getColor(primary);
+            font-size: getFontSize(xl);
+            font-family: $font-family-title;
+            font-weight: getFontWeight(semi-bold);
+            text-align: center;
+        }
+    
+        &-text{
+            color: getColor(white-text);
+            font-size: getFontSize(md);
+            font-weight: getFontWeight(normal);
+            text-align: center;
+        }
+    }
+
+    @include response(xl){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}

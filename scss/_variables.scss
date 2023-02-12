@@ -10,7 +10,9 @@ $colors: (
     primary: #B68D40,
     secondary: #F4EBD0,
     tertiary: #122620,
-    quaternary: #D6AD60
+    quaternary: #D6AD60,
+    white-text: #FFFFFF,
+    black-text: #000000,
 );
 
 ///
@@ -29,6 +31,7 @@ $transition: 0.2s;
 /// Mapa de tamaños de fuente
 /// @group Tamaños
 $font-sizes:(
+    icons-size: 10rem,
     xxxl: 6rem,
     xxl: 4rem,
     xl: 3rem,
@@ -76,3 +79,17 @@ $font-family-logo: 'Cormorant', serif;
 
 ///
 $max-width: 1200px;
+
+
+// Cambio de variables de carousel de Bootstrap
+
+$carousel-control-color: getColor(primary);
+$carousel-control-icon-width: 7rem;
+$carousel-control-opacity: 0.5;
+$carousel-control-hover-opacity: 1;
+$carousel-transition-duration: .8s;
+
+$carousel-indicator-active-bg: getColor(primary);
+$carousel-indicator-width: 3rem;
+$carousel-indicator-height: 1rem;
+$carousel-indicator-spacer: 2rem;

@@ -1,0 +1,27 @@
+.banner{
+    &-text{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: getColor(tertiary);
+        z-index: 50;
+        text-transform: uppercase;
+        top: 32%;
+        left: 72%;
+        font-size: getFontSize(md);
+        font-family: $font-family-logo;
+        
+        @include response(md){
+            font-size: getFontSize(xxxl);
+            top: 37%;
+            left: 72%;
+        }
+    }
+    
+    &-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 10;
+    }
+}

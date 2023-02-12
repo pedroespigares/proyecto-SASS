@@ -1,0 +1,53 @@
+.footer{
+    grid-column:  1 / -1;
+    grid-row: 3;
+    @include flex($direction: column, $justify: center, $align: center, $gap: 2rem);
+    padding-bottom: 2rem;
+
+    &-title{
+        font-size: getFontSize(xl);
+        font-weight: getFontWeight(bold);
+        color: getColor(primary);
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    &-link{
+        font-size: getFontSize(md);
+        font-weight: getFontWeight(normal);
+        color: getColor(white-text);
+        padding-bottom: 2rem;
+        text-align: center;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover{
+            cursor: pointer;
+            color: getColor(primary);
+            transition: $transition;
+        }
+    }
+
+    &-icon{
+        font-size: getFontSize(xl);
+        color: getColor(white-text);
+        padding: 0 1rem;
+        transition: $transition;
+
+        &:hover{
+            cursor: pointer;
+            color: getColor(primary);
+            transition: $transition;
+        }
+    }
+
+    &-list{
+        list-style: none;
+    }
+
+    @include response(xl){
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+    }
+}

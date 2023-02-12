@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4328465e5b.js" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" />
     <title>LuxHouse</title>
 </head>
 <body>
@@ -16,6 +18,13 @@
                 <h1 class="logo-text">LuxHouse</h1>
             </div>
             <nav class="header-nav">
+                <div class="hamburger">
+                  <div class="hamburger-lines">
+                      <span class="hamburger-lines-line hamburger-lines-line-1"></span>
+                      <span class="hamburger-lines-line hamburger-lines-line-2"></span>
+                      <span class="hamburger-lines-line hamburger-lines-line-3"></span>
+                  </div> 
+              </div>
                 <ul class="header-nav-list">
                     <li class="header-nav-item"><a class="header-nav-link" href="index.html">Home</a></li>
                     <li class="header-nav-item"><a class="header-nav-link" href="about.html">About</a></li>
@@ -25,6 +34,183 @@
                 </ul>
             </nav>
         </header>
+
+        <main class="content">
+            <section class="banner">
+                <img class="banner-img" src="images/banner.jpg" alt="Banner">
+                <h1 class="banner-text">Feel at home in style</h1>
+            </section>
+
+            <section class="publicity">
+                <h2 class="publicity-header">Luxury villas & vacation rentals</h2>
+                <div class="publicity-column">
+                    <i class="fa-solid fa-medal publicity-column-icon"></i>
+                    <div class="publicity-column-content">
+                        <h2 class="publicity-column-title">30 YEARS OF EXPERIENCE</h2>
+                        <p class="publicity-column-text">We personally inspect the finest villas for rent</p>
+                    </div>
+                </div>
+                <div class="publicity-column">
+                    <i class="fa-solid fa-users publicity-column-icon"></i>
+                    <div class="publicity-column-content">
+                        <h2 class="publicity-column-title">OUTSTANDING SERVICE</h2>
+                        <p class="publicity-column-text">We can custom-design your vacation with our first class concierge team</p>
+                    </div>
+                </div>
+                <div class="publicity-column">
+                    <i class="fa-solid fa-earth-europe publicity-column-icon""></i>
+                    <div class="publicity-column-content">
+                        <h2 class="publicity-column-title">TRAVEL AROUND THE WORLD</h2>
+                        <p class="publicity-column-text">With LuxHouse, you can choose hundreds of luxurious houses around the world</p>
+                    </div>
+                </div>
+                <div class="publicity-column">
+                    <i class="fa-solid fa-tag publicity-column-icon"></i>
+                    <div class="publicity-column-content">
+                        <h2 class="publicity-column-title">SPECIAL OFFERS</h2>
+                        <p class="publicity-column-text">Discover our latest deals for the best luxury villa rentals</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+              <h2 class="gallery-header">Gallery</h2>
+              <div id="galleryCarousel" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="gallery-image-container">
+                      <img src="/images/carousel/carousel-1.jpg" class="gallery-img" alt="Awesome bed views">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="gallery-image-container">
+                      <img src="/images/carousel/carousel-2.jpg" class="gallery-img" alt="White kitchen">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="gallery-image-container">
+                      <img src="/images/carousel/carousel-3.jpg" class="gallery-img" alt="Awesome bedroom">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="gallery-image-container">
+                      <img src="/images/carousel/carousel-4.jpg" class="gallery-img" alt="Rest room">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </section>
+
+            <section class="news">
+              <h2 class="news-header">News</h2>
+              <article class="news-first card">
+                <img src="images/news/new-1.jpg"class="card-img"/>
+                <div class="card-text">
+                  <h3 class="card-text-title">Valentine's Day in Verona</h3>
+                  <p class="card-text-description">Valentine’s Day is around the corner and quoting 
+                    one of the most iconic song lyrics of all time ‘’Love is in the air’’. This week 
+                    we take you to the city symbol of eternal love: Verona, the ultimate lovers’ getaway 
+                    to celebrate in grand style with a luxury Italian vacation.</p>
+                </div>
+                <button class="card-button">Read more</button>
+              </article>
+              <article class="news-second card">
+                <img src="images/news/new-2.jpg"class="card-img"/>
+                <div class="card-text">
+                  <h3 class="card-text-title">Venice Carnival 2023</h3>
+                  <p class="card-text-description">As the city of picture-perfect canals and waterside 
+                    palazzi ramps up for a brand-new edition of the carnival parade, discover Home in Italy’s 
+                    top tips on how to celebrate and the festive events that you cannot miss. Discover the program 
+                    of unique activities planned for this year and start ...
+                  </p>
+                </div>
+                <button class="card-button">Read more</button>
+              </article>
+              <article class="news-third card">
+                <img src="images/news/new-3.jpg"class="card-img"/>
+                <div class="card-text">
+                  <h3 class="card-text-title">Guide for Puglia</h3>
+                  <p class="card-text-description">Thanks to pristine waters, sandy beaches and unspoiled 
+                    countryside, this enchanting region in Southern Italy has increasingly become one of the 
+                    trendiest and favoured destinations among refined travellers. If you are looking for a dreamy 
+                    Italian vacation</p>
+                </div>
+                <button class="card-button">Read more</button>
+              </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-column">
+              <h2 class="footer-title">Help</h2>
+              <ul class="footer-list">
+                <li><a class="footer-link" href="#">Contact</a></li>
+                <li><a class="footer-link" href="#">Shipment</a></li>
+                <li><a class="footer-link" href="#">Devolutions</a></li>
+                <li><a class="footer-link" href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-title">About Us</h2>
+              <ul class="footer-list">
+                <li><a class="footer-link" href="#">Who we are</a></li>
+                <li><a class="footer-link" href="#">Work with us</a></li>
+                <li><a class="footer-link" href="#">Privacity policy</a></li>
+                <li><a class="footer-link" href="#">Terms and conditions</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-title">Legal</h2>
+              <ul class="footer-list">
+                <li><a class="footer-link" href="#">Cookies policiy</a></li>
+                <li><a class="footer-link" href="#">Privacity policy</a></li>
+                <li><a class="footer-link" href="#">Terms and conditions</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-title">Payment Methods</h2>
+              <ul class="footer-row footer-list">
+                <li>
+                  <a class="footer-icon" href="#"><i class="fab fa-cc-visa"></i></a>
+                </li>
+                <li>
+                  <a class="footer-icon" href="#"><i class="fab fa-cc-mastercard"></i></a>
+                </li>
+                <li>
+                  <a class="footer-icon" href="#"><i class="fab fa-cc-paypal"></i></a>
+                </li>
+                <li>
+                  <a class="footer-icon" href="#"><i class="fab fa-cc-amazon-pay"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-title">Follow Us</h2>
+              <ul class="footer-row footer-list">
+                <li>
+                  <a href="https://www.instagram.com/ezclothes/" target="_blank"><i class="fab fa-instagram footer-icon"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ezclothes" target="_blank"><i class="fab fa-facebook-f footer-icon"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/ezclothes" target="_blank"><i class="fab fa-twitter footer-icon"></i></a>
+                </li>
+              </ul>
+            </div>
+          </footer>
     </div>
 </body>
 </html>

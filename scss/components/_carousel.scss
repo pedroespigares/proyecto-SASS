@@ -1,0 +1,16 @@
+.gallery{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    &-header{
+        @include section_header();
+    }
+
+    &-image-container{
+        @include flex();
+    }
+
+    &-img{
+        width: 75%;
+    }
+}

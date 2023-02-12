@@ -45,12 +45,10 @@
 /// 
 @mixin navigation($center: false){
     &-list{
-        display: flex;
         @if($center){
-            justify-content: center;
-            gap: 10rem;
+            @include flex($direction: row, $justify: center, $align: center, $gap: 10rem);
         } @else {
-            justify-content: space-around;
+            @include flex($direction: row, $justify: space-around);
         }
         align-items: center;
         height: 100%;
@@ -76,7 +74,7 @@
     }
     
     &-button{
-        color: white;
+        color: getColor(white-text);
         background-color: getColor(primary);
         font-size: getFontSize(md);
         transition: $transition;
@@ -84,11 +82,18 @@
         padding: 1rem 3rem 1rem 3rem;
         &:hover{
             cursor: pointer;
-            background-color: darken(getColor(quaternary), 10%);
+            background-color: darken(getColor(quaternary), 20%);
             transition: $transition;
         }
     }
 }
+
+
+
+
+
+
+
 
 
 /// Mixin de posicionamiento con flexbox
@@ -108,4 +113,18 @@
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+}
+
+@mixin section_header(){
+    font-family: $font-family-logo;
+    font-size: getFontSize(xxl);
+    font-weight: getFontWeight(bold);
+    text-transform: uppercase;
+    text-align: center;
+    color: getColor(primary);
+    padding-bottom: 7rem;
+
+    @include response(lg){
+        font-size: getFontSize(xxxl);
+    }
 }

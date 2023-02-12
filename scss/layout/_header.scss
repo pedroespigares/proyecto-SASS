@@ -1,9 +1,9 @@
 /// Layout cabecera
 .header{
     grid-column:  1 / -1;
-    grid-row: 1 / 2;
+    grid-row: 1;
     display: grid;
     grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: min-content;
     grid-gap: 2rem;
 }
