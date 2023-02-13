@@ -33,6 +33,16 @@
                     <button class="header-nav-button">Get Started</button>
                 </ul>
             </nav>
+            <nav class="search-nav">
+              <div class="search-nav-weather">
+                <i class="fa-solid fa-sun search-nav-weather-icon"></i>
+                <h5 class="search-nav-weather-text">20ºC</h5>
+              </div>
+              <div class="search-nav-arrival">
+                <h5 class="search-nav-arrival-text">Arrival</h5>
+                <input class="search-nav-arrival-input" type="date" name="arrival" id="arrival">
+              </div>
+            </nav>
         </header>
 
         <main class="content">
@@ -113,8 +123,78 @@
               </div>
             </section>
 
+
+
+            <section class="opinions">
+              <h2 class="opinions-header">Guest Reviews</h2>
+              <div id="opinionsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#opinionsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#opinionsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#opinionsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#opinionsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#opinionsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="opinions-text">
+                      <h4 class="opinions-text-title">Paco Caro</h4>
+                      <i data-star="4.4"></i>
+                      <p class="opinions-text-description">I recently stayed at a luxury villa and I have to say, I was thoroughly impressed. From the moment I arrived, I was struck by the stunning architecture and beautiful landscaping. The villa was spacious, with large windows that allowed for plenty of natural light and breathtaking views of the surrounding area.
+
+                        The interior of the villa was equally impressive, with high-end finishes and luxurious furnishings. I particularly appreciated the attention to detail, from the comfortable bedding to the well-appointed kitchen. I also loved the private pool and outdoor living spaces, which were perfect for lounging and entertaining.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="opinions-text">
+                      <h4 class="opinions-text-title">Rosa Esther</h4>
+                      <i data-star="5"></i>
+                      <p class="opinions-text-description">Staying at the luxury villa was an unforgettable experience. The villa was beautifully designed with all the modern amenities one could ask for. The staff was incredibly accommodating and made sure that our every need was met. The view from the villa was simply breathtaking and added to the overall serene and relaxing 
+                        atmosphere. I was especially impressed by the private pool and the well-manicured gardens. The bedrooms were spacious and comfortable, with high-end linens and decor. Overall, the luxury villa exceeded all of my expectations and I would highly recommend it to anyone looking for a luxurious and relaxing escape.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="opinions-text">
+                      <h4 class="opinions-text-title">Maria José</h4>
+                      <i data-star="4.0"></i>
+                      <p class="opinions-text-description">I recently stayed at a luxury villa and I have to say, I was thoroughly impressed. From the moment I arrived, I was struck by the stunning architecture and beautiful landscaping. The villa was spacious, with large windows that allowed for plenty of natural light and breathtaking views of the surrounding area.
+
+                        The interior of the villa was equally impressive, with high-end finishes and luxurious furnishings. I particularly appreciated the attention to detail, from the comfortable bedding to the well-appointed kitchen. I also loved the private pool and outdoor living spaces, which were perfect for lounging and entertaining.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="opinions-text">
+                      <h4 class="opinions-text-title">Adelaida</h4>
+                      <i data-star="4.8"></i>
+                      <p class="opinions-text-description">The luxury villa is truly a magnificent sight to behold. The spacious interiors are beautifully designed with an eye for detail, featuring top-of-the-line furnishings, high-end appliances and elegant decor. The bedrooms are spacious and comfortable, with en-suite bathrooms that are nothing short of a spa experience. 
+                        The outdoor living spaces are equally impressive, offering breathtaking views and ample opportunities for relaxation and entertainment. Whether you're looking for a quiet, peaceful escape or a lively, luxurious getaway, this villa has something for everyone.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="opinions-text">
+                      <h4 class="opinions-text-title">Pepe Luis</h4>
+                      <i data-star="4.4"></i>
+                      <p class="opinions-text-description">I recently had the privilege of staying in a luxurious villa and I have to say, it was truly a breathtaking experience. From the moment I stepped inside, I was greeted with opulence and grandeur. The decor was stunning with intricate details and high-end furnishings that exuded elegance and sophistication.
+
+                        The villa had spacious rooms with comfortable bedding, high-quality linens and plush pillows. The bathrooms were out of this world, with luxurious fixtures, high-pressure showers and deep soaking tubs. The kitchen was fully equipped with top-of-the-line appliances, making it easy to cook a gourmet meal.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- <section class="prestigeHouses">
+              <h2 class="prestigeHouses-header">Prestigious houses around the world</h2>
+              <img src="images/collage/1.jpg" class="prestigeHouses-1 prestigeHouses-img"/>
+              <img src="images/collage/2.jpg" class="prestigeHouses-2 prestigeHouses-img""/>
+              <img src="images/collage/3.jpg" class="prestigeHouses-3 prestigeHouses-img""/>
+              <img src="images/collage/4.jpg" class="prestigeHouses-4 prestigeHouses-img""/>
+            </section> -->
+
+
             <section class="news">
-              <h2 class="news-header">News</h2>
+              <h2 class="news-header">Places of interest</h2>
               <article class="news-first card">
                 <img src="images/news/new-1.jpg"class="card-img"/>
                 <div class="card-text">
@@ -133,7 +213,7 @@
                   <p class="card-text-description">As the city of picture-perfect canals and waterside 
                     palazzi ramps up for a brand-new edition of the carnival parade, discover Home in Italy’s 
                     top tips on how to celebrate and the festive events that you cannot miss. Discover the program 
-                    of unique activities planned for this year and start ...
+                    of unique activities planned for this year ...
                   </p>
                 </div>
                 <button class="card-button">Read more</button>

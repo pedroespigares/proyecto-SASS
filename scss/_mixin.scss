@@ -60,7 +60,7 @@
 
     &-link{
         color: getColor(primary);
-        font-size: getFontSize(md);
+        font-size: getFontSize(lg);
         text-decoration: none;
         transition: $transition;
         padding: 1rem 3rem 1rem 3rem;
@@ -76,7 +76,7 @@
     &-button{
         color: getColor(white-text);
         background-color: getColor(primary);
-        font-size: getFontSize(md);
+        font-size: getFontSize(lg);
         transition: $transition;
         border: none;
         padding: 1rem 3rem 1rem 3rem;
@@ -126,5 +126,27 @@
 
     @include response(lg){
         font-size: getFontSize(xxxl);
+    }
+}
+
+@mixin input(
+    $color: getColor(white-text), 
+    $background-color: getColor(tertiary), 
+    $border-color: getColor(white-text), 
+    $border-radius: 0.5rem, 
+    $font-size: getFontSize(xl), 
+    $padding: 1rem 2rem
+){
+    color: $color;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    padding: $padding;
+    transition: $transition;
+    &:focus{
+        outline: none;
+        border: 1px solid getColor(primary);
+        transition: $transition;
     }
 }
