@@ -20,7 +20,7 @@
     grid-column: 1/-1;
     grid-row: 2/2;
 
-    @include flex($justify: space-around);
+    @include flex($justify: space-evenly);
 
     &-weather{
         @include flex($gap: 1rem);
@@ -37,20 +37,41 @@
     }
 
     &-arrival{
-        @include flex($direction: column, $gap: 1rem);
+        @include flex($direction: column, $align: flex-start, $gap: 1rem);
 
         &-text{
             color: getColor(white-text);
             font-size: getFontSize(xl);
+        }
+
+        &-input{
+            @include input();
+        }
+
+        &-input-group{
+            @include flex($gap: 2rem);
 
             &-icon{
                 font-size: getFontSize(xxl);
                 color: getColor(primary);
             }
         }
+    }
+
+    &-rooms{
+        @include flex($direction: column, $align: flex-start, $gap: 1rem);
+
+        &-text{
+            color: getColor(white-text);
+            font-size: getFontSize(xl);
+        }
 
         &-input{
-            @include input($color: getColor(white-text), $background-color: getColor(tertiary), $border-color: getColor(white-text), $border-radius: 0.5rem, $font-size: getFontSize(xl), $padding: 1rem 2rem);
+            @include input();
         }
+    }
+
+    &-search-button{
+        @include button();
     }
 }

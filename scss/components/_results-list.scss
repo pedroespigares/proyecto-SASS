@@ -1,0 +1,68 @@
+.results-list{
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+
+    &-list{
+        @include flex($direction: column, $justify: center, $align: center, $gap: 10rem);
+
+        &-item{
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 10rem;
+    
+            &-img{
+                padding-left: 5rem;
+                grid-area: 1 / 1 / 2 / 2;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            &-info{
+                grid-area: 1 / 2 / 2 / 3;
+                @include flex($direction: column, $justify: space-between, $align: flex-start, $gap: 3rem);
+                padding: 1rem;
+
+                &-title{
+                    color: getColor(primary);
+                    font-size: getFontSize(xxl);
+                }
+
+                &-capacity{
+                    @include flex($gap: 3rem);
+
+                    &-icon{
+                        font-size: getFontSize(xxl);
+                        color: getColor(primary);
+                    }
+
+                    &-text{
+                        color: getColor(white-text);
+                        font-size: getFontSize(xxl);
+                    }
+                }
+                
+                &-description{
+                    color: getColor(white-text);
+                    font-size: getFontSize(lg);
+                }
+
+                &-services{
+                    @include flex($gap: 5rem);
+
+                    &-icon{
+                        font-size: getFontSize(xxl);
+                        color: getColor(primary);
+                    }
+                }
+
+                &-detail{
+                    @include button();
+                }
+            }
+        }
+    }
+
+    @include stars(xxl);
+}

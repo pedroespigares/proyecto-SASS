@@ -1,0 +1,17 @@
+.results{
+    padding-left: 5rem;
+    padding-top: 6rem;
+
+    @include flex($justify: flex-start, $gap: 2rem);
+    &-title{
+        color: getColor(primary);
+        font-size: getFontSize(xxl);
+        font-weight: getFontWeight(bold);
+    }
+
+    &-number{
+        color: getColor(white-text);
+        font-size: getFontSize(xxl);
+        font-weight: getFontWeight(bold);
+    }
+}
