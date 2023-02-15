@@ -10,18 +10,28 @@
     @include flex(column, center, center, 3rem);
 
     &-title {
-      font-size: getFontSize(xxxl);
+      @include response(xl) {
+        font-size: getFontSize(xxxl);
+      }
+
+      font-size: getFontSize(xxl);
       font-weight: getFontWeight(bold);
       text-transform: uppercase;
       color: getColor(primary);
+      text-align: center;
     }
 
     &-description {
-      font-size: getFontSize(xl);
+      @include response(xl) {
+        font-size: getFontSize(xl);
+        text-align: justify;
+      }
+
+      font-size: getFontSize(sm);
       font-weight: getFontWeight(normal);
       text-transform: none;
       color: getColor(tertiary);
-      text-align: justify;
+      text-align: left;
     }
   }
 }

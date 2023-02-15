@@ -1,11 +1,17 @@
 .footer{
     grid-column:  1 / -1;
     grid-row: 3;
-    @include flex($direction: column, $justify: center, $align: center, $gap: 2rem);
+    @include response(xl){
+        @include flex($direction: column, $justify: center, $align: flex-start, $gap: 5rem);
+    }
+
+    @include flex($direction: column, $gap: 2rem);
     padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: darken(getColor(tertiary), 2%);
 
     &-title{
-        font-size: getFontSize(xl);
+        font-size: getFontSize(xxl);
         font-weight: getFontWeight(bold);
         color: getColor(primary);
         padding-bottom: 2rem;
@@ -13,7 +19,7 @@
     }
 
     &-link{
-        font-size: getFontSize(md);
+        font-size: getFontSize(lg);
         font-weight: getFontWeight(normal);
         color: getColor(white-text);
         padding-bottom: 2rem;
@@ -29,7 +35,7 @@
     }
 
     &-icon{
-        font-size: getFontSize(xl);
+        font-size: getFontSize(xxl);
         color: getColor(white-text);
         padding: 0 1rem;
         transition: $transition;
