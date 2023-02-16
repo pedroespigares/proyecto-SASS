@@ -24,3 +24,7 @@ html{
     grid-template-rows: repeat(3, min-content);
     background-color: getColor(tertiary);
 }
+
+a{
+    text-decoration: none;
+}

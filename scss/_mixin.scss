@@ -137,10 +137,10 @@
     }
 }
 
-@mixin button{
+@mixin button($size: lg){
     color: getColor(white-text);
     background-color: getColor(primary);
-    font-size: getFontSize(lg);
+    font-size: getFontSize($size);
     transition: $transition;
     border: none;
     padding: 1rem 3rem 1rem 3rem;
@@ -150,6 +150,11 @@
         background-color: darken(getColor(quaternary), 20%);
         transition: $transition;
     }
+}
+
+@mixin sectionPaddings(){
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 @mixin stars($size: xxxl){

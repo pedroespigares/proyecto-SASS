@@ -11,7 +11,10 @@
     background-color: darken(getColor(tertiary), 2%);
 
     &-title{
-        font-size: getFontSize(xxl);
+        @include response(xl){
+            font-size: getFontSize(xxl);
+        }
+        font-size: getFontSize(xl);
         font-weight: getFontWeight(bold);
         color: getColor(primary);
         padding-bottom: 2rem;
@@ -19,7 +22,10 @@
     }
 
     &-link{
-        font-size: getFontSize(lg);
+        @include response(xl){
+            font-size: getFontSize(lg);
+        }
+        font-size: getFontSize(md);
         font-weight: getFontWeight(normal);
         color: getColor(white-text);
         padding-bottom: 2rem;
@@ -35,7 +41,10 @@
     }
 
     &-icon{
-        font-size: getFontSize(xxl);
+        @include response(xl){
+            font-size: getFontSize(xxl);
+        }
+        font-size: getFontSize(xl);
         color: getColor(white-text);
         padding: 0 1rem;
         transition: $transition;

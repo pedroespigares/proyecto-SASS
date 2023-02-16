@@ -1,6 +1,5 @@
 .opinions {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  @include sectionPaddings();
 
   &-header {
     @include section_header();

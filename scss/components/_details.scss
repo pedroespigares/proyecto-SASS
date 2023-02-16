@@ -1,20 +1,90 @@
 .details{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    @include flex(column, flex-start, flex-start, 10rem);
+    padding-bottom: 10rem;
+    
+    @include response(xl){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 55vh repeat(2, 1fr);
+    }
 
     &-img{
-        grid-area: 1 / 1 / 2 / 5;
+        grid-area: 1 / 1 / 2 / 3;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    &-details{
-        grid-area: 3 / 1 / 7 / 4;
+    &-info{
+        padding-left: 7rem;
+        grid-area: 2 / 1 / 4 / 2;
+        @include flex(column, flex-start, flex-start, 6rem);
+        @include stars();
+
+        &-house-name{
+            color: getColor(white-text);
+            font-size: getFontSize(xxxl);
+        }
+
+        &-capacity{
+            @include flex($gap: 3rem);
+
+            &-icon{
+                font-size: getFontSize(xxl);
+                color: getColor(primary);
+            }
+
+            &-text{
+                color: getColor(white-text);
+                font-size: getFontSize(xxl);
+            }
+        }
+
+        &-title{
+            color: getColor(primary);
+            @include response(xl){
+                font-size: getFontSize(xl);
+            }
+            font-size: getFontSize(lg);
+        }
+
+        &-text{
+            @include response(xl){
+                font-size: getFontSize(md);
+            }
+            color: getColor(white-text);
+            font-size: getFontSize(sm);
+        }
     }
 
     &-disponibility{
-        grid-area: 3 / 4 / 5 / 5;
+        grid-area: 2 / 2 / 3 / 3;
+
+        @include flex(column, center, center, 5rem);
+
+        &-button{
+            @include response(xl){
+                @include button(xl);
+            }
+            @include button(lg);
+        }
+
+        &-title{
+            color: getColor(white-text);
+            @include response(xl){
+                font-size: getFontSize(xxl);
+            }
+            font-size: getFontSize(xl);
+            text-align: center;
+        }
+
+        &-text{
+            color: getColor(white-text);
+            @include response(xl){
+                font-size: getFontSize(xl);
+            }
+            font-size: getFontSize(lg);
+            text-align: center;
+        }
     }
 }

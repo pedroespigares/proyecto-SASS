@@ -6,6 +6,13 @@
     @include flex($direction: row, $justify: center, $align: center, $gap: 5rem);
     &-img{
         width: 10rem;
+        transition: $transition;
+        
+        &:hover{
+            cursor: pointer;
+            scale: 1.1;
+            transition: $transition;
+        }
     }
 
     &-text{
@@ -13,6 +20,13 @@
         font-family: $font-family-logo;
         text-transform: uppercase;
         color: getColor(primary);
-        font-weight: 700;
+        font-weight: getFontWeight(bold);
+        transition: $transition;
+
+        &:hover{
+            cursor: pointer;
+            scale: 1.1;
+            transition: $transition;
+        }
     }
 }

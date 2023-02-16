@@ -1,0 +1,38 @@
+.information{
+    @include sectionPaddings();
+
+    &-title{
+        color: getColor(primary);
+        @include response(xl){
+            font-size: getFontSize(xxxl);
+        }
+        font-size: getFontSize(xxl);
+        font-family: $font-family-logo;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 7rem;
+    }
+
+    &-container{
+        @include flex(column, center, center, 5rem);
+
+        &-subtitle{
+            color: getColor(primary);
+            @include response(xl){
+                font-size: getFontSize(xl);
+            }
+            font-size: getFontSize(lg);
+        }
+
+        &-text{
+            color: getColor(white-text);
+            @include response(xl){
+                font-size: getFontSize(lg);
+            }
+            font-size: getFontSize(md);
+            text-align: justify;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+}
