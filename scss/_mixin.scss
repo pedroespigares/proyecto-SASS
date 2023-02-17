@@ -114,6 +114,7 @@
     color: getColor(primary);
     padding-bottom: 7rem;
 
+    word-spacing: 2rem;
     @include response(lg){
         font-size: getFontSize(xxxl);
     }
@@ -133,6 +134,24 @@
     &:focus{
         outline: none;
         border: 1px solid getColor(primary);
+        transition: $transition;
+    }
+}
+
+@mixin contactInput(){
+    color: getColor(white-text);
+    background-color: darken(getColor(tertiary), 2%);
+    border: 1px solid getColor(primary);
+    border-radius: 0.5rem;
+    @include response(xl){
+      font-size: getFontSize(xl);
+    }
+    font-size: getFontSize(sm);
+    padding: 1rem 2rem;
+    transition: $transition;
+    &:focus{
+        outline: none;
+        border: 1px solid lighten(getColor(primary), 20%);
         transition: $transition;
     }
 }

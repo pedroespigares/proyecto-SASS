@@ -1,0 +1,42 @@
+.contact{
+    @include sectionPaddings();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 1fr;
+
+    &-title{
+       @include section_header();
+       grid-area: 1 / 1 / 2 / 3;
+    }
+
+    &-container{
+        grid-area: 2 / 1 / 3 / 2;
+        @include flex(column, center, center, 4rem);
+
+        &-item{
+            @include flex(column, center, center, 4rem);
+            padding-left: 10rem;
+
+            width: 100%;
+    
+            &-input{
+                @include contactInput();
+            }
+
+            &-button{
+                @include button(xxl);
+            }
+        }
+    }
+
+    &-img-container{
+        grid-area: 2 / 2 / 3 / 3;
+        @include flex(row, center, center);
+
+        &-img{
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

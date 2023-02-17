@@ -16,6 +16,8 @@ html{
     @include response(sm){
         font-size: 50%;
     }
+
+    scroll-behavior: smooth;
 }
 
 .container{

@@ -2,19 +2,11 @@
     @include sectionPaddings();
 
     &-title{
-        color: getColor(primary);
-        @include response(xl){
-            font-size: getFontSize(xxxl);
-        }
-        font-size: getFontSize(xxl);
-        font-family: $font-family-logo;
-        text-transform: uppercase;
-        text-align: center;
-        padding-bottom: 7rem;
+        @include section_header();
     }
 
     &-container{
-        @include flex(column, center, center, 5rem);
+        @include flex(column, center, center, 6rem);
 
         &-subtitle{
             color: getColor(primary);
@@ -33,6 +25,29 @@
             text-align: justify;
             padding-left: 5rem;
             padding-right: 5rem;
+        }
+
+        &-img{
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-label{
+            color: getColor(white-text);
+            @include response(xl){
+                font-size: getFontSize(lg);
+            }
+            font-size: getFontSize(md);
+            padding-bottom: 1rem;
+        }
+
+        &-input{
+            @include contactInput();
+        }
+
+        &-button{
+            @include button();
         }
     }
 }

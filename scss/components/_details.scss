@@ -4,8 +4,9 @@
     
     @include response(xl){
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 55vh repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1.5fr 0.5fr;
+        grid-template-rows: 57vh repeat(2, 1fr);
     }
 
     &-img{
@@ -57,8 +58,8 @@
         }
     }
 
-    &-disponibility{
-        grid-area: 2 / 2 / 3 / 3;
+    &-aside{
+        grid-area: 2 / 2 / 4 / 3;
 
         @include flex(column, center, center, 5rem);
 
