@@ -1,11 +1,22 @@
 /// Logo
 .logo{
-    grid-column:  1 / 2;
+    grid-column:  1 / 5;
     grid-row: 1 / 2;
+
+    @include response(xl){
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
     padding: 1rem;
     @include flex($direction: row, $justify: center, $align: center, $gap: 5rem);
+
     &-img{
-        width: 10rem;
+        @include response(xl){
+            width: 10rem;
+        }
+
+        width: 7rem;
         transition: $transition;
         
         &:hover{
@@ -16,7 +27,10 @@
     }
 
     &-text{
-        font-size: getFontSize(xxl);
+        @include response(xl){
+            font-size: getFontSize(xxl);
+        }
+        font-size: getFontSize(xl);
         font-family: $font-family-logo;
         text-transform: uppercase;
         color: getColor(primary);

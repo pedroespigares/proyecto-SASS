@@ -1,18 +1,10 @@
 .header-nav{
-    grid-column: 6/10;
-    grid-row: 1/2;
-    @include navigation();
-
-    @include response(xl){
-        grid-column: 6/10;
-    }
+    grid-column: 8/10;
+    @include navigation($hamburger: true);
 
     @include response(lg){
-        grid-column: 5/10;
-    }
-
-    @include response(md){
-        grid-column: 4/10;
+        grid-column: 6/10;
+        @include navigation($hamburger: false);
     }
 }
 

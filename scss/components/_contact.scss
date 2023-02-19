@@ -1,8 +1,11 @@
 .contact{
     @include sectionPaddings();
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.2fr 1fr;
+    @include response(xl){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.2fr 1fr;
+    }
+    @include flex(column, center, center, 4rem);
 
     &-title{
        @include section_header();
@@ -15,8 +18,9 @@
 
         &-item{
             @include flex(column, center, center, 4rem);
-            padding-left: 10rem;
-
+            @include response(xl){
+                padding-left: 10rem;
+            }
             width: 100%;
     
             &-input{
@@ -24,7 +28,10 @@
             }
 
             &-button{
-                @include button(xxl);
+                @include response(xl){
+                    @include button(xxl);
+                }
+                @include button(md);
             }
         }
     }

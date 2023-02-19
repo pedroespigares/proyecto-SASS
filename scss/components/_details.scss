@@ -17,14 +17,22 @@
     }
 
     &-info{
-        padding-left: 7rem;
+        @include response(xl){
+            padding-left: 7rem;
+            @include stars();
+        }
+        padding-left: 2rem;
         grid-area: 2 / 1 / 4 / 2;
         @include flex(column, flex-start, flex-start, 6rem);
-        @include stars();
+        @include stars(xl);
 
         &-house-name{
             color: getColor(white-text);
-            font-size: getFontSize(xxxl);
+            @include response(xl){
+                font-size: getFontSize(xxxl);
+            }
+            font-size: getFontSize(xxl);
+            text-align: center;
         }
 
         &-capacity{
@@ -67,7 +75,7 @@
             @include response(xl){
                 @include button(xl);
             }
-            @include button(lg);
+            @include button(md);
         }
 
         &-title{

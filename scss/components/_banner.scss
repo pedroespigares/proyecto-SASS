@@ -6,14 +6,26 @@
         color: getColor(tertiary);
         z-index: 50;
         text-transform: uppercase;
-        top: 32%;
+        top: 85%;
         left: 72%;
-        font-size: getFontSize(md);
+        font-size: getFontSize(sm);
         font-family: $font-family-logo;
         
+        @include response(sm){
+            font-size: getFontSize(md);
+            top: 65%;
+            left: 72%;
+        }
+
         @include response(md){
+            font-size: getFontSize(xl);
+            top: 67%;
+            left: 72%;
+        }
+
+        @include response(xl){
             font-size: getFontSize(xxxl);
-            top: 37%;
+            top: 47%;
             left: 72%;
         }
     }
