@@ -15,6 +15,7 @@
                 font-size: getFontSize(xl);
             }
             font-size: getFontSize(lg);
+            font-family: $font-family-title;
         }
 
         &-text{
@@ -26,6 +27,14 @@
             text-align: justify;
             padding-left: 5rem;
             padding-right: 5rem;
+        }
+
+        &-list{
+            color: getColor(white-text);
+            @include response(xl){
+                font-size: getFontSize(lg);
+            }
+            font-size: getFontSize(md);
         }
 
         &-end{

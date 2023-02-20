@@ -15,6 +15,7 @@
             color: getColor(primary);
             font-weight: getFontWeight(bold);
             padding-bottom: 1rem;
+            font-family: $font-family-title;
         }
 
         &-description{

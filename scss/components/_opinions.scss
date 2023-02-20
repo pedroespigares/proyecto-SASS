@@ -19,6 +19,7 @@
       text-transform: uppercase;
       color: getColor(primary);
       text-align: center;
+      font-family: $font-family-title;
     }
 
     &-description {
@@ -36,15 +37,6 @@
   }
 }
 
-@include response(xl) {
-  #opinionsCarousel {
-    background-color: getColor(secondary);
-    width: 90%;
-    margin: 0 auto;
-    padding: 10rem;
-  }
-  @include stars();
-}
 
 #opinionsCarousel {
   background-color: getColor(secondary);
@@ -53,4 +45,14 @@
   padding: 6rem;
 }
 
-@include stars(xl)
+@include stars(xl);
+
+@include response(xl) {
+  #opinionsCarousel {
+    background-color: getColor(secondary);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10rem;
+  }
+  @include stars(xxl);
+}

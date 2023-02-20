@@ -16,6 +16,7 @@
         }
         font-size: getFontSize(xl);
         font-weight: getFontWeight(bold);
+        font-family: $font-family-title;
     }
 
     &-number{

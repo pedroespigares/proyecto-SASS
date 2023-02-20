@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4328465e5b.js" crossorigin="anonymous"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/index.js"></script>
@@ -75,7 +75,34 @@
 
         <main class="content">
             <section class="details">
-                <img class="details-img" src="images/gojar.jpg" alt="Room 1">
+              <div id="detailCarousel" class="carousel slide details-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#detailCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#detailCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#detailCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#detailCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="/images/gojar.jpg" class="details-carousel-img" alt="Gojar House Porch">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="/images/carousel/carousel-4.jpg" class="details-carousel-img" alt="White kitchen">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="/images/carousel/carousel-3.jpg" class="details-carousel-img" alt="Awesome bedroom">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="/images/carousel/carousel-2.jpg" class="details-carousel-img" alt="Rest room">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#detailCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#detailCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
 
                 <div class="details-info">
                     <i data-star="4.4"></i>
@@ -87,19 +114,31 @@
                       <h4 class="details-info-capacity-text">3</h4>
                     </div>
                     <h3 class="details-info-title">General description</h3>
+                    <p class="details-info-text">At the end of a cypress avenue protected by the woods, the ‘curtain’ of the Umbrian hills opens, a real postcard image that surrounds Alla Fattoria, including its guest houses.
+                      This very large family villa is near Todi, at walking distance to Doglio (two kilometres distance), an ancient hamlet where you can find a grocery store and a coffee shop. This exclusive property with a private spa and swimming pool is the ideal venue for weddings, by renting Alla Fattoria, you will be able to make your dream come true by experiencing a fabulous wedding, whilst enjoying a romantic, relaxing and authentic Italian holiday. Discover Alla Fattoria wedding packages and choose the best combination suiting your needs and dreams!
+                      The whole property, with its two acres of land, partly garden and partly olive groves looks out over the Natural Park of Monte Peglia which can be admired from almost every room. To forget about the smog, the traffic noise, the cases of modern civilization is easy in this place, where nature infuses a sense of peace, involving the five senses with its colours, scents and sounds.</p>
                     
-                    <h3 class="details-info-title">Facilities</h3>
-                    <p class="details-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id hendrerit sem. Nunc eleifend orci id maximus viverra. Etiam varius est eu sodales vehicula. Donec sagittis diam at nibh maximus, ut rutrum odio aliquet. Morbi convallis placerat augue non eleifend. Aliquam ac tempor metus, vitae rhoncus dolor. Nulla laoreet posuere malesuada. Etiam lacus diam, ultrices malesuada ipsum vel, vehicula pellentesque sapien.
-
-                      In eget diam erat. Sed nunc eros, auctor et porttitor sit amet, condimentum quis odio. Quisque gravida egestas lectus vel finibus. Etiam faucibus, nisl id molestie commodo, velit nisl aliquam leo, eget imperdiet lacus dui eu felis. Ut congue lorem vel condimentum volutpat. Aliquam tempus dignissim est in pulvinar. Sed scelerisque turpis vitae justo egestas, quis imperdiet ante consectetur. Curabitur ut arcu eget ex hendrerit dapibus vitae ut arcu. Curabitur molestie nunc at lacus vestibulum sollicitudin. Etiam elementum placerat sollicitudin.</p>
+                      <h3 class="details-info-title">Facilities</h3>
+                    <ul class="details-info-list">
+                      <li>Outdoor swimming pool (16x8m, depth 1,30 – 3m)</li>
+                      <li>Heated indoor swimming pool (15x3,50m, depth 1,40 - 1,70m)</li>
+                      <li>Hydro massage area</li>
+                      <li>Air conditioning in all bedrooms, Tv room and dining room</li>
+                      <li>Portable BBQ</li>
+                      <li>Tv room with SKY TV</li>
+                      <li>Parking area inside the gate for 4 cars, covered parking area outside the gate for 10 cars and uncovered parking area for 10 cars</li>
+                    </ul>
+                    
                     <h3 class="details-info-title">Amenities</h3>
-                    <p class="details-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id hendrerit sem. Nunc eleifend orci id maximus viverra. Etiam varius est eu sodales vehicula. Donec sagittis diam at nibh maximus, ut rutrum odio aliquet. Morbi convallis placerat augue non eleifend. Aliquam ac tempor metus, vitae rhoncus dolor. Nulla laoreet posuere malesuada. Etiam lacus diam, ultrices malesuada ipsum vel, vehicula pellentesque sapien.
-
-                      In eget diam erat. Sed nunc eros, auctor et porttitor sit amet, condimentum quis odio. Quisque gravida egestas lectus vel finibus. Etiam faucibus, nisl id molestie commodo, velit nisl aliquam leo, eget imperdiet lacus dui eu felis. Ut congue lorem vel condimentum volutpat. Aliquam tempus dignissim est in pulvinar. Sed scelerisque turpis vitae justo egestas, quis imperdiet ante consectetur. Curabitur ut arcu eget ex hendrerit dapibus vitae ut arcu. Curabitur molestie nunc at lacus vestibulum sollicitudin. Etiam elementum placerat sollicitudin.</p>
+                      <ul class="details-info-list">
+                        <li>Village Monte Castello di Vibio with bars, restaurants, post office</li>
+                        <li>Supermarkets 9,6km/5,9miles</li>
+                        <li>Horse riding center 11,8km/7,3miles</li>
+                        <li>Chemist’s in Madonna del Piano 12,9km/8miles</li>
+                        <li>Hospital in Pantalla 23,6km/14,6miles</li>
+                      </ul>
                     <h3 class="details-info-title">Rates</h3>
-                    <p class="details-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id hendrerit sem. Nunc eleifend orci id maximus viverra. Etiam varius est eu sodales vehicula. Donec sagittis diam at nibh maximus, ut rutrum odio aliquet. Morbi convallis placerat augue non eleifend. Aliquam ac tempor metus, vitae rhoncus dolor. Nulla laoreet posuere malesuada. Etiam lacus diam, ultrices malesuada ipsum vel, vehicula pellentesque sapien.
-
-                      In eget diam erat. Sed nunc eros, auctor et porttitor sit amet, condimentum quis odio. Quisque gravida egestas lectus vel finibus. Etiam faucibus, nisl id molestie commodo, velit nisl aliquam leo, eget imperdiet lacus dui eu felis. Ut congue lorem vel condimentum volutpat. Aliquam tempus dignissim est in pulvinar. Sed scelerisque turpis vitae justo egestas, quis imperdiet ante consectetur. Curabitur ut arcu eget ex hendrerit dapibus vitae ut arcu. Curabitur molestie nunc at lacus vestibulum sollicitudin. Etiam elementum placerat sollicitudin.</p>
+                    <p class="details-info-text">486€ per night</p>
                 </div>
                 
                 <aside class="details-aside">
