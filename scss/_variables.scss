@@ -1,4 +1,4 @@
-//// Proyecto: Luxury Life
+//// Proyecto: LuxHouse
 /// @author Pedro Espigares
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600&display=swap');
@@ -74,7 +74,9 @@ $font-weight: (
 
 /// 
 $font-family-title: 'Montserrat', sans-serif;
+///
 $font-family-text: 'Poppins', sans-serif;
+///
 $font-family-logo: 'Cormorant', serif;
 
 ///
@@ -83,13 +85,22 @@ $max-width: 1200px;
 
 // Cambio de variables de carousel de Bootstrap
 
+///
 $carousel-control-color: getColor(primary);
+///
 $carousel-control-icon-width: 7rem;
+///
 $carousel-control-opacity: 0.5;
+///
 $carousel-control-hover-opacity: 1;
+///
 $carousel-transition-duration: .8s;
 
+///
 $carousel-indicator-active-bg: getColor(primary);
+///
 $carousel-indicator-width: 3rem;
+///
 $carousel-indicator-height: 1rem;
+///
 $carousel-indicator-spacer: 2rem;

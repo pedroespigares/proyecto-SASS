@@ -1,3 +1,4 @@
+/// Componente: Publicidad
 .publicity{
     @include flex($direction: column, $gap: 5rem);
     @include sectionPaddings();

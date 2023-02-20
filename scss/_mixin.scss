@@ -79,7 +79,7 @@
 
       z-index: 200;
       display: block;
-      font-size: getFontSize(lg);
+      font-size: getFontSize(md);
         cursor: pointer;
 
         &-lines{
@@ -163,6 +163,12 @@
     gap: $gap;
 }
 
+
+/// Mixin para título de sección
+/// @example
+/// .opinions{
+///  @include section_header();
+/// }
 @mixin section_header(){
     font-family: $font-family-logo;
     font-size: getFontSize(xl);
@@ -178,6 +184,11 @@
     }
 }
 
+/// Mixin para inputs de cabecera
+/// @example
+/// .header-input{
+///   @include input();
+/// }
 @mixin input(){
     color: getColor(white-text);
     background-color: darken(getColor(tertiary), 2%);
@@ -196,6 +207,13 @@
     }
 }
 
+
+/// Mixin para inputs de formulario de contacto
+/// @example
+/// .contact-input{
+///  @include contactInput();
+/// }
+/// 
 @mixin contactInput(){
     color: getColor(white-text);
     background-color: darken(getColor(tertiary), 2%);
@@ -215,6 +233,12 @@
     }
 }
 
+/// Mixin para botones
+/// @example
+/// .button{
+///   @include button();
+/// }
+/// @param {string} $size [lg] -- Tamaño del botón
 @mixin button($size: lg){
     color: getColor(white-text);
     background-color: getColor(primary);
@@ -230,11 +254,25 @@
     }
 }
 
+
+/// Mixin que aplica los paddings inicial y final de las secciones
+/// @example
+/// .section{
+///  @include sectionPaddings();
+/// }
+/// 
 @mixin sectionPaddings(){
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
 
+
+/// Mixin para estrellas de valoración
+/// @example
+/// .opinions-stars{
+///   @include stars();
+/// }
+/// @param {string} $size [xxxl] -- Tamaño de las estrellas
 @mixin stars($size: xxxl){
     [data-star] {
         text-align: left;
