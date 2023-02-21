@@ -54,7 +54,7 @@
       width: 100%;
       height: 100%;
       background-color: darken(getColor(tertiary), 2%);
-      top: 1rem;
+      top: 0.01rem;
       left: -200%;
       right: 0.01rem;
       text-align: center;
@@ -213,16 +213,14 @@
 /// .contact-input{
 ///  @include contactInput();
 /// }
+/// @param {string} $size [xl] -- Tamaño del input
 /// 
-@mixin contactInput(){
+@mixin contactInput($size: xl){
     color: getColor(white-text);
     background-color: darken(getColor(tertiary), 2%);
     border: 1px solid getColor(primary);
     border-radius: 0.5rem;
-    @include response(xl){
-      font-size: getFontSize(xl);
-    }
-    font-size: getFontSize(sm);
+    font-size: getFontSize($size);
     padding: 1rem 2rem;
     transition: $transition;
     resize: none;

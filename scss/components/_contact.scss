@@ -25,7 +25,11 @@
             width: 100%;
     
             &-input{
-                @include contactInput();
+                @include response(xl){
+                    @include contactInput();
+                }
+                @include contactInput(xs);
+                
             }
 
             &-button{
@@ -38,13 +42,17 @@
     }
 
     &-img-container{
-        grid-area: 2 / 2 / 3 / 3;
-        @include flex(row, center, center);
+        @include response(xl){
+            grid-area: 2 / 2 / 3 / 3;
+            @include flex(row, center, center);
 
-        &-img{
-            width: 60%;
-            height: 100%;
-            object-fit: cover;
+            &-img{
+                width: 60%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
+
+        display: none;
     }
 }
