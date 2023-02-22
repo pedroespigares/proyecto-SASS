@@ -14,6 +14,7 @@ const concat= require('gulp-concat');
 const gulpif= require('gulp-if');
 const sass= require('gulp-dart-sass');
 const sassdoc= require('gulp-sassdoc');
+const cssnano = require('gulp-cssnano');
 const processhtml= require('gulp-processhtml');
 const {series, parallel, src, dest, watch} = require('gulp');
 
@@ -21,7 +22,8 @@ const {series, parallel, src, dest, watch} = require('gulp');
 
 // Esta tarea minifica y renombra el archivo style.css
 function minimize_and_rename(){
-    return src("./proyecto/css/styles.css")
+    return src("./css/styles.css")
+        .pipe(cssnano())
         .pipe(rename({suffix: '.min', extname: '.css'}))
         .pipe(dest("./proyecto/css"));
 }
@@ -56,6 +58,7 @@ function html(){
 function all(){
     return src("scss/styles.scss")
         .pipe(sass())
+        .pipe(cssnano())
         .pipe(rename({suffix: '.min', extname: '.css'}))
         .pipe(dest("./proyecto/css"));
 }
